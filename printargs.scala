@@ -1,1 +1,2 @@
-args.foreach(println)
+for(arg <- args)
+    println(arg)

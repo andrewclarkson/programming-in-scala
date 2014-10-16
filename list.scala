@@ -4,5 +4,8 @@ val goodbyes = List("Goodbye", "Farewell", "See you later")
 
 val combined = greetings ::: goodbyes
 
-if (args.length == 1) combined.map(s => s + " " + args(0)).foreach(println)
-
+if (args.length == 1) {
+    val index = args(0).toInt
+    println(s"""Removing: "${combined(index)}"""")
+    combined.patch(index, Nil, 1).foreach(println)
+}

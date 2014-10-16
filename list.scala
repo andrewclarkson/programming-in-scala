@@ -14,11 +14,9 @@ def parseInt(string: String): Option[Int] = {
 
 if (args.length == 1) {
     parseInt(args(0)) match {
-        case Some(index) => {
-            if(index >= 0 && index < combined.length) {
-                println(s"""Removing: "${combined(index)}"""")
-                combined.patch(index, Nil, 1).foreach(println)
-            }
+        case Some(index) if index >= 0 && index < combined.length => {
+            println(s"""Removing: "${combined(index)}"""")
+            combined.patch(index, Nil, 1).foreach(println)
         } 
         case _ => {}
     }

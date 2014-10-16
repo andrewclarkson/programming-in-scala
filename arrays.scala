@@ -1,4 +1,2 @@
-val greetings = Array.apply("Hi", "Hello", "What's up?")
-
-greetings.foreach(println)
+Array("Hi", "Hello", "What's up?").foreach(println)
 

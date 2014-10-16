@@ -1,5 +1,8 @@
 var i = 0
 while(i < args.length) {
-    println(args(i))
+    if(i != 0)
+        print(" ")
+    print(args(i))
     i += 1
 }
+print("\n")

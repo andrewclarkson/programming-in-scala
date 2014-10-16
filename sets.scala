@@ -5,7 +5,7 @@ var combined = names ++ newComers
 
 
 if (args.length > 0) {
-    combined = combined ++ args.toSet
+    combined = combined union args.toSet
 }
 
 combined.foreach(println)

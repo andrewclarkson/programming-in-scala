@@ -6,6 +6,8 @@ val combined = greetings ::: goodbyes
 
 if (args.length == 1) {
     val index = args(0).toInt
-    println(s"""Removing: "${combined(index)}"""")
-    combined.patch(index, Nil, 1).foreach(println)
+    if(index < combined.length && index >= 0) {
+        println(s"""Removing: "${combined(index)}"""")
+        combined.patch(index, Nil, 1).foreach(println)
+    }
 }

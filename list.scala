@@ -1,4 +1,4 @@
-val greetings = List("Hi", "Hello", "What's up?")
+val greetings = "Hi" :: "Hello" :: "What's up?" :: Nil
 
 val goodbyes = List("Goodbye", "Farewell", "See you later")
 

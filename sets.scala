@@ -1,2 +1,3 @@
-val names = Set("James", "Kim", "John", "Hellen")
+var names = Set("James", "Kim", "John", "Hellen")
+names += "Jackson"
 names.foreach(println)

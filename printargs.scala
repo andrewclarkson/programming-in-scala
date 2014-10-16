@@ -1,2 +1,1 @@
-for(arg <- args)
-    println(arg)
+println(args.mkString(" "))

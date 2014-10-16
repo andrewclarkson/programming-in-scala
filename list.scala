@@ -1,4 +1,6 @@
 val greetings = List("Hi", "Hello", "What's up?")
 
-greetings.foreach(println)
+val goodbyes = List("Goodbye", "Farewell", "See you later")
+
+(greetings ::: goodbyes).foreach(println)
 

@@ -1,5 +1,6 @@
-import scala.collection.mutable.Set
-
 val names = Set("James", "Kim", "John", "Hellen")
-names += "Jackson"
-names.foreach(println)
+
+if (args.length == 1) {
+    println(names.contains(args(0)))
+}
+

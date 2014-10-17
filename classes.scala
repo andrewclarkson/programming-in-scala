@@ -1,8 +1,8 @@
 class ChecksumAccumulator {
   private var sum = 0
   
-  def add(byte: Byte): Unit = sum += byte
-  def checksum(): Int = return ~(sum & 0xFF) + 1
+  def add(byte: Byte) { sum += byte }
+  def checksum(): Int = ~(sum & 0xFF) + 1
 }
 
 val accumulator = new ChecksumAccumulator

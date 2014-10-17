@@ -1,3 +1,5 @@
+import scala.collection.mutable.Map
+
 class ChecksumAccumulator {
   private var sum = 0
   
@@ -5,10 +7,21 @@ class ChecksumAccumulator {
   def checksum(): Int = ~(sum & 0xFF) + 1
 }
 
-val accumulator = new ChecksumAccumulator
+object ChecksumAccumulator {
+  private val cache = Map[String, Int]()
 
-for(char <- "Hello World".getBytes()) {
-  accumulator.add(char)
+  def calculate(string: String): Int = 
+    if(cache.contains(string))
+      cache(string)
+    else {
+      val accumulator = new ChecksumAccumulator
+      for(byte <- string.getBytes()) {
+        accumulator.add(byte)
+      }
+      val checksum = accumulator.checksum()
+      cache += (string -> checksum)
+      checksum
+    }
 }
 
-println(accumulator.checksum())
+println(ChecksumAccumulator.calculate("Hello World"))

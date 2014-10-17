@@ -1,5 +1,5 @@
 class ChecksumAccumulator {
-    var sum = 0
+    private var sum = 0
 }
 
 val acc = new ChecksumAccumulator

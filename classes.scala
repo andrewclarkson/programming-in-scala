@@ -1,10 +1,19 @@
 class ChecksumAccumulator {
-    private var sum = 0
+  private var sum = 0
+  
+  def add(byte: Byte): Unit = {
+    sum += byte
+  }
+  
+  def checksum(): Int = {
+    return ~(sum & 0xFF) + 1
+  }
 }
 
-val acc = new ChecksumAccumulator
-val csa = new ChecksumAccumulator
+val accumulator = new ChecksumAccumulator
 
-acc.sum = 1
+for(char <- "Hello World".getBytes()) {
+  accumulator.add(char)
+}
 
-println(csa.sum)
+println(accumulator.checksum())

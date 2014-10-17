@@ -1,7 +1,5 @@
 import ChecksumAccumulator.calculate
 
-object Summer {
-  def main(args: Array[String]) {
-    args.foreach(arg => println(arg + ": " + calculate(arg)))
-  }
+object Summer extends App {
+  args.foreach(arg => println(arg + ": " + calculate(arg)))
 }

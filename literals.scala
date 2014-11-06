@@ -33,3 +33,16 @@ val ❤ = "heart"
  * $ export JAVA_OPTS="-Dfile.encoding=UTF-8"
  */
 println(a, a_unicode, heart, backslash, ❤)
+
+val string = "string"
+
+val raw = """
+Hello 
+World
+"""
+
+val raw_stripped = """|Hello
+                     |World
+""".stripMargin
+
+println(string, raw, raw_stripped)

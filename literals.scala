@@ -24,6 +24,7 @@ val he\u0061rt = '\u2764'
 
 val backslash = '\\'
 
+val ❤ = "heart"
 
 /*
  * If the heart doesn't show check 
@@ -31,4 +32,4 @@ val backslash = '\\'
  * this can be set by:
  * $ export JAVA_OPTS="-Dfile.encoding=UTF-8"
  */
-println(a, a_unicode, heart, backslash)
+println(a, a_unicode, heart, backslash, ❤)
